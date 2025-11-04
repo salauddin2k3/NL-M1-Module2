@@ -28,14 +28,20 @@ const surveyResponses = [
 
 const count = surveyResponses.reduce((table, response) => {
 
-    console.log(table, ":", response);
+    // console.log(table, ":", response);
 
-    if(table[response]){
-        table[response] = table[response] + 1;
-    }
-    else{
-        table[response] = 1;
-    };
+    // if(table[response]){
+    //     table[response] = table[response] + 1;
+    // }
+    // else{
+    //     table[response] = 1;
+    // };
+
+
+    //! in one line
+    
+    table[response] = (table[response] || 0) + 1;
+
 
     return table;
 
